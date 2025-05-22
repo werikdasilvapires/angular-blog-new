@@ -1,28 +1,35 @@
 .container__articles{
   margin-top: 30px;
-
-  @media(min-width: 700px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gnews-articles {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
   justify-content: center;
+  width: 100%;
 }
 
 .gnews-article-card {
-  background: #222;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(230,36,41,0.10), 0 1.5px 8px 0 rgba(255,179,71,0.08);
   width: 320px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid #fff0;
+}
+
+.gnews-article-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(230,36,41,0.18), 0 2px 12px 0 rgba(255,179,71,0.15);
+  border: 2px solid #e62429;
 }
 
 .gnews-article-image {
@@ -30,41 +37,65 @@
   height: 180px;
   object-fit: cover;
   background: #333;
+  border-bottom: 2px solid #ffb347;
 }
 
 .gnews-article-content {
-  padding: 16px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .gnews-article-title {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.25rem;
+  color: #e62429;
   margin: 0 0 8px 0;
+  font-weight: bold;
 }
 
 .gnews-article-description {
-  color: #ccc;
+  color: #444;
   font-size: 1rem;
   margin-bottom: 16px;
   flex: 1;
 }
 
 .gnews-article-btn {
-  background: #e62429;
+  background: linear-gradient(90deg, #e62429 0%, #ffb347 100%);
   color: #fff;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 18px;
+  border-radius: 8px;
   text-align: center;
   font-weight: bold;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(230,36,41,0.10);
+  border: none;
+  outline: none;
 }
 
 .gnews-article-btn:hover {
-  background: #b71c1c;
+  background: #fff;
+  color: #e62429;
+  border: 1px solid #e62429;
+}
+
+.no-posts {
+  margin-top: 40px;
+  color: #e62429;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .gnews-articles {
+    gap: 16px;
+  }
+  .gnews-article-card {
+    width: 98vw;
+    max-width: 98vw;
+  }
 }
 
 

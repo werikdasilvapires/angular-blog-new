@@ -1,13 +1,19 @@
 .comments-container {
   margin-top: 40px;
   width: 100%;
+  background: linear-gradient(90deg, #fff3e0 0%, #ffe0e0 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(230,36,41,0.10);
+  padding: 18px;
 }
 
 .comments-title {
-  font-size: 20px;
+  font-size: 1.3rem;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid #e62429;
+  color: #e62429;
+  font-weight: bold;
 }
 
 .comments-list {
@@ -15,10 +21,11 @@
 }
 
 .comment-item {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.25);
   padding: 15px;
   margin-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
+  border-left: 4px solid #e62429;
 }
 
 .comment-header {
@@ -29,21 +36,28 @@
 
 .comment-author {
   font-weight: bold;
-  color: #ccc;
+  color: #e62429;
 }
 
 .comment-date {
-  font-size: 0.8rem;
-  color: #777;
+  font-size: 0.9rem;
+  color: #ffb347;
 }
 
 .comment-text {
   line-height: 1.5;
-  color: #aaa;
+  color: #444;
 }
 
 .no-comments {
   text-align: center;
-  color: #777;
+  color: #e62429;
   margin-top: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .comments-container {
+    padding: 10px;
+  }
 }

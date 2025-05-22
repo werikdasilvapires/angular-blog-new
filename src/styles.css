@@ -3,21 +3,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #111111;
-  color: white;
+  background: none;
+  color: inherit;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-a {
-  text-decoration: none;
 }
 
 body {
   padding: 0 60px;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fff3e0 0%, #ffe0e0 100%);
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #e62429;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #ffb347;
 }
 
 @media (max-width: 600px) {
   body {
-    padding: 0 20px;
+    padding: 0 5vw;
   }
 }

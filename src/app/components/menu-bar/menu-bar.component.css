@@ -2,47 +2,108 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(90deg, #e62429 0%, #ffb347 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(230,36,41,0.10), 0 1.5px 8px 0 rgba(255,179,71,0.08);
+  padding: 18px 10px 10px 10px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .menu-categories > ul,
 .menu-social > ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
 }
 
 .menu-categories > ul > li,
 .menu-social > ul > li {
-  margin-right: 20px;
+  margin-right: 0;
   list-style: none;
 }
 
 .menu-categories {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .menu-categories > ul > li > a {
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 15px;
-  transition: background-color 0.3s;
+  padding: 7px 18px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.10);
+  transition: background 0.3s, color 0.3s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(255,255,255,0.08);
+  font-size: 1rem;
 }
 
 .menu-categories > ul > li > a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: #fff;
+  color: #e62429;
+  box-shadow: 0 2px 8px 0 rgba(255,255,255,0.18);
+}
+
+.menu-search {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+.menu-social > ul > li > a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.10);
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-social > ul > li > a:hover {
+  background: #fff;
+  color: #e62429;
+}
+
+.menu-social > ul > li > span {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 2px;
 }
 
 @media (min-width: 768px) {
   .container__menu-bar {
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
+    align-items: center;
+    width: 95%;
     max-width: 1200px;
+    padding: 18px 30px 10px 30px;
   }
-
   .menu-categories {
     margin-bottom: 0;
+  }
+  .menu-search {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container__menu-bar {
+    padding: 10px 2vw;
+    border-radius: 10px;
+  }
+  .menu-categories > ul > li > a,
+  .menu-social > ul > li > a {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+  .menu-search {
+    max-width: 100%;
   }
 }
 
