@@ -1,0 +1,19 @@
+<div class="container__content">
+  <div class="content__cover">
+    <img src="{{ photoCover }}" alt="{{ contentTitle }}" srcset="">
+  </div>
+  <div class="content__title">
+    <h1>{{ contentTitle }}</h1>
+    <span class="category-badge" *ngIf="category">{{ category }}</span>
+    <hr />
+  </div>
+  <div class="content__description">
+    <a [routerLink]="['']"> << VOLTAR </a>
+    <p>
+      {{ contentDescription }}
+    </p>
+  </div>
+  
+  <!-- Seção de comentários - usando o getter postId em vez da propriedade privada id -->
+  <app-comment-list *ngIf="postId" [postId]="postId"></app-comment-list>
+</div>

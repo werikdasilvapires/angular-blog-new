@@ -1,0 +1,24 @@
+<div class="container__menu-bar">
+  <div class="menu-categories">
+    <ul>
+      <li><a [routerLink]="['']">Home</a></li>
+      <li *ngFor="let category of categories">
+        <a [routerLink]="['/category', category]">{{ category }}</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="menu-search">
+    <app-search-bar></app-search-bar>
+  </div>
+  
+  <div class="menu-social">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/flora-martins-299631a3/">Linkedin</a></li>
+      <li><span>•</span></li>
+      <li><a href="https://github.com/codefloracode">Github</a></li>
+      <li><span>•</span></li>
+      <li><a href="https://www.instagram.com/hiimf/">Instagram</a></li>
+    </ul>
+  </div>
+</div>

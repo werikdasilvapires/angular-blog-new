@@ -1,0 +1,36 @@
+<app-menu-title></app-menu-title>
+
+<div class="category-title">
+  <h2>{{ categoryName }}</h2>
+</div>
+
+<div class="container__articles" *ngIf="posts.length > 0">
+  <div class="articles__main" *ngIf="posts.length > 0">
+    <app-big-card
+      [Id]="posts[0].id"
+      [photoCover]="posts[0].photoCover"
+      [cardTitle]="posts[0].title"
+      [cardDescription]="posts[0].description"
+    ></app-big-card>
+  </div>
+  
+  <div class="articles__others">
+    <app-small-card
+      *ngFor="let post of posts.slice(1)"
+      [Id]="post.id"
+      [cardTitle]="post.title"
+      [photoCover]="post.photoCover"
+    ></app-small-card>
+  </div>
+</div>
+
+<div class="no-posts" *ngIf="posts.length === 0">
+  <p>Nenhum post encontrado para esta categoria.</p>
+</div>
+
+<app-pagination
+  *ngIf="posts.length > 0"
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (pageChange)="onPageChange($event)">
+</app-pagination>

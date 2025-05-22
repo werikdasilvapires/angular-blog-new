@@ -1,0 +1,25 @@
+<app-menu-title></app-menu-title>
+<div class="search-title">
+  <h2>Resultados para: "{{ searchQuery }}"</h2>
+</div>
+<div class="container__articles" *ngIf="gnewsArticles.length > 0">
+  <div class="gnews-articles">
+    <div class="gnews-article" *ngFor="let article of gnewsArticles">
+      <a [href]="article.url" target="_blank" rel="noopener">
+        <img [src]="article.image" [alt]="article.title" width="120" style="object-fit:cover;max-width:100px;max-height:70px;margin-right:10px;">
+      </a>
+      <div class="gnews-info">
+        <a [href]="article.url" target="_blank" rel="noopener">
+          <strong>{{ article.title }}</strong>
+        </a>
+        <div style="font-size:12px;color:gray;">
+          {{ article.source.name }} - {{ article.publishedAt | date:'short' }}
+        </div>
+        <div style="font-size:13px;">{{ article.description }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="no-posts" *ngIf="gnewsArticles.length === 0">
+  <p>Nenhum resultado encontrado para "{{ searchQuery }}".</p>
+</div>

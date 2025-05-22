@@ -1,0 +1,48 @@
+.comment-form {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: white;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.submit-button:disabled {
+  background-color: #222;
+  cursor: not-allowed;
+}
